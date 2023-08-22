@@ -14,6 +14,7 @@
 		60436FA42A951BE000E8251A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60436FA32A951BE000E8251A /* Assets.xcassets */; };
 		60436FA72A951BE000E8251A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60436FA52A951BE000E8251A /* LaunchScreen.storyboard */; };
 		60436FB32A951F7900E8251A /* Persons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60436FB22A951F7900E8251A /* Persons.swift */; };
+		60436FB52A95274200E8251A /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60436FB42A95274200E8251A /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		60436FA62A951BE000E8251A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60436FA82A951BE000E8251A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60436FB22A951F7900E8251A /* Persons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persons.swift; sourceTree = "<group>"; };
+		60436FB42A95274200E8251A /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,19 +64,19 @@
 				60436FB12A951F4C00E8251A /* Models */,
 				60436FAF2A951F2600E8251A /* Storyboards */,
 				60436FA32A951BE000E8251A /* Assets.xcassets */,
-				60436FAE2A951F0E00E8251A /* New Group */,
+				60436FAE2A951F0E00E8251A /* App */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
 		};
-		60436FAE2A951F0E00E8251A /* New Group */ = {
+		60436FAE2A951F0E00E8251A /* App */ = {
 			isa = PBXGroup;
 			children = (
 				60436F9A2A951BDF00E8251A /* AppDelegate.swift */,
 				60436F9C2A951BDF00E8251A /* SceneDelegate.swift */,
 				60436FA82A951BE000E8251A /* Info.plist */,
 			);
-			path = "New Group";
+			path = App;
 			sourceTree = "<group>";
 		};
 		60436FAF2A951F2600E8251A /* Storyboards */ = {
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				60436FB22A951F7900E8251A /* Persons.swift */,
+				60436FB42A95274200E8251A /* DataStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				60436F9F2A951BDF00E8251A /* ViewController.swift in Sources */,
 				60436F9B2A951BDF00E8251A /* AppDelegate.swift in Sources */,
 				60436FB32A951F7900E8251A /* Persons.swift in Sources */,
+				60436FB52A95274200E8251A /* DataStore.swift in Sources */,
 				60436F9D2A951BDF00E8251A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
