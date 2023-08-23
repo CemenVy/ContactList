@@ -16,15 +16,22 @@ struct Person {
         "\(firstName) \(lastName)"
     }
     
-    static func getPersonList(from dataStore: DataStore, of count: Int) -> [Person] {
-        var personList: [Person] = []
+    static func getPersonList(from dataStore: DataStore) -> [Person] {
+        var persons: [Person] = []
         
         var shuffledFirstName = dataStore.firstNames.shuffled()
         var shuffledLastName = dataStore.lastNames.shuffled()
         var shuffledPhoneNumber = dataStore.phoneNumbers.shuffled()
         var shuffledEmail = dataStore.emails.shuffled()
         
-        while personList.count < count,
+        let availableCount = min(
+            shuffledFirstName.count,
+            shuffledLastName.count,
+            shuffledPhoneNumber.count,
+            shuffledEmail.count
+        )
+        
+        while persons.count < availableCount,
               let firstName = shuffledFirstName.popLast(),
               let lastName = shuffledLastName.popLast(),
               let phoneNumber = shuffledPhoneNumber.popLast(),
@@ -36,8 +43,8 @@ struct Person {
                 phoneNumber: phoneNumber,
                 email: email
             )
-            personList.append(person)
+            persons.append(person)
         }
-        return personList
+        return persons
     }
 }

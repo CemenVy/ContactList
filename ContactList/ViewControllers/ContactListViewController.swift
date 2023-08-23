@@ -8,9 +8,16 @@
 import UIKit
 
 final class ContactListViewController: UITableViewController {
-    private var personList = Person.getPersonList(from: DataStore(), of: 12)
-
+    private var personList = Person.getPersonList(from: DataStore())
+    
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let personDetailsVC = segue.destination as? PersonDetailsViewController
+        personDetailsVC?.person = personList[indexPath.row]
+    }
 }
+
 //MARK: - UITabelViewDataSource
 extension ContactListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,8 +39,4 @@ extension ContactListViewController {
         let currentPerson = personList.remove(at: sourceIndexPath.row)
         personList.insert(currentPerson, at: destinationIndexPath.row)
     }
-}
-//MARK: - UITabelViewDelegate
-extension ContactListViewController {
-    
 }
